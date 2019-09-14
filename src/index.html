@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>JavaScript Loan Calculator</title>
+    <style>
+        /*esta e uma folha de estilos CSS: ela  adiciona estilo na saída do programa */
+        
+        .output {
+            font-weight: bold;
+        }
+        /* Valores calculados em negrito */
+        
+        #payment {
+            text-decoration: underline;
+        }
+        /* Para elemento com id="payment"*/
+        
+        #graph {
+            border: solid black 1px;
+        }
+        /* O gráfico tem borda simple*/
+        
+        th,
+        td {
+            vertical-align: top;
+        }
+        /*não centraliza células da tabela*/
+    </style>
+</head>
+
+<body>
+    <!--
+        Esta é uma tabela HTML com elementos <input> que permitem ao usuário inserir dados e elementos <span>
+        nos quais o programa pode exibir seus resultados. Esses elementos de entrada definem
+        rotinas de tratamento de evento "onchange" ou "onclick". Elas especificam strings de código JavaScript a ser
+        executado quando o usuário insere dados ou dá um clique.    
+    -->
+    <table>
+        <tr>
+            <th>Enter Loan Data:</th>
+            <td></td>
+            <th>Loan Balance, Cumulative Equity, and Interest Payments</th>
+        </tr>
+        <tr>
+            <td>Amount of the loan ($):</td>
+            <td><input id="amount" onchange="calculate();"></td>
+            <td rowspan=8>
+                <canvas id="graph" width="400" height="250"></canvas>
+            </td>
+        </tr>
+        <tr>
+            <td>Anunual interest (%):</td>
+            <td><input id="apr" onchange="calculate();"></td>
+        </tr>
+        <tr>
+            <td>Repayment period (years):</td>
+            <td><input id="years" onchange="calculate();"></td>
+            <tr>
+                <td>Zipcode (to find lenders):</td>
+                <td><input id="zipcode" onchange="calculate();"></td>
+                <tr>
+                    <th>Approximate Payments:</th>
+                </tr>
+                <td><button onclick="calculate();">Calculate</button></td>
+            </tr>
+            <tr>
+                <td>Monthly payment</td>
+                <td>$<span class="output" id="payment"></span></td>
+            </tr>
+            <tr>
+                <td>Total payment:</td>
+                <td>$<span class="output" id="total"></span></td>
+            </tr>
+            <tr>
+                <td>Total interest</td>
+                <td>$<span class="output" id="totalinterest"></span> </td>
+            </tr>
+            <tr>
+                <th>Sponsors:</th>
+                <td colspan=2>
+                    Apply for your loan with one of these fine lenders:
+                    <div id="lenders"></div>
+                </td>
+            </tr>
+    </table>
+
+    <!-- O restante deste exemplo é código JavaScript na marca <script> a seguir  -->
+    <!-- Normalmente, este script ficiaria na marca <head> do documento acima, mas-->
+    <!-- é mais fácil entendê-lo aqui, depois de ter visto seu contexto HTML.  -->
+
+</body>
+<script type="text/javascript" src="logica.js"></script>
+
+</html>
