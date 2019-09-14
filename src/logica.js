@@ -127,3 +127,22 @@ function getLenders(amount, apr, years, zipcode) {
     }
 
 }
+
+// Faz o gráfico do saldo devedor mensal, dos juros do capital em um elemento <canvas>
+// da HTML.
+// Se for chamado sem argumentos, basta apagar qualquer gráfico desenhado anteriormente.
+function chart(principal, interest, monthly, payments) {
+    var graph = document.getElementById("graph"); // Obtém a marca <canvas>
+    graph.width = graph.width; // Mágica para apagar e redefinir o elemento
+    // canvas
+    // Se chamamos sem argumentos ou se esse navegador não suporta
+    // elementos gráficos em um elemento <canvas>, basta retornar agora.
+    if (arguments.length == 0 || !graph.getContext) return;
+
+    // Obtém objeto "contexto" de <canvas> que define a API de desenho
+    var g = graph.getContext("2d"); // Todo desenho é feito com esse objeto
+    var width = graph.width,
+        height = graph.height; //Obtém o tamanho da tela de 
+    // desenho
+
+}
