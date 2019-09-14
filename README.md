@@ -1,4 +1,4 @@
-# My Open Source Boilerplate
+# Minha calculadora de empréstimos em JavaScript
 
 [![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/robsongap/open-source-boilerplate/blob/master/LICENSE.md)
 
