@@ -3,9 +3,10 @@ Projeto de uma caluladora de empréstimos em Javascript
 
 
 
-[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)](https://github.com/robsongap/open-source-boilerplate/blob/master/LICENSE.md)
+[![licence mit](https://img.shields.io/badge/licence-MIT-blue.svg)]()
 
-> :rocket: A template to help you create open source projects more organized.
+> :rocket: Um pequeno projeto simples do livro guiadefinitivo um breve introdução mostrando os conceitos da linguagem.
+ A small simple design of the definitive guide book a brief introduction showing the concepts of language. 
 
 ## Versioning
 
